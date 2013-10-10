@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project default="dist" basedir=".">
+
+	<property name="project.name" value="mock-ii"/>
+	<property name="project.version" value="0.0"/>
+	<property name="project.src" location="src"/>
+	<property name="project.dist" location="dist"/>
+
+	<target name="dist">
+		<property name="archive" value="${project.dist}/${project.name}-${project.version}.zip"/>
+		<delete file="${archive}"/>
+		<zip destfile="${archive}" basedir="${project.src}"/>
+	</target>
+
+</project>
